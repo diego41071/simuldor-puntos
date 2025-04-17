@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Puntos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sidebar lateral -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="logo-valientes.png" alt="Logo Valientes" />
+    </div>
+    <nav class="menu">
+      <a href="#" class="menu-item"><span class="icon">💗</span><span class="label">Puntos</span></a>
+      <a href="#" class="menu-item"><span class="icon">📦</span><span class="label">Catálogo</span></a>
+      <a href="#" class="menu-item"><span class="icon">📈</span><span class="label">Seguimientos</span></a>
+      <a href="#" class="menu-item"><span class="icon">🎯</span><span class="label">Exhibiciones</span></a>
+      <a href="#" class="menu-item"><span class="icon">📚</span><span class="label">Capacitación</span></a>
+      <a href="#" class="menu-item"><span class="icon">📄</span><span class="label">Términos y condiciones</span></a>
+      <a href="#" class="menu-item"><span class="icon">👤</span><span class="label">Mi perfil</span></a>
+      <a href="#" class="menu-item"><span class="icon">📞</span><span class="label">Contáctenos</span></a>
+      <a href="#" class="menu-item logout"><span class="icon">🚪</span><span class="label">Salir</span></a>
+    </nav>
+  </aside>
+
+  <!-- Contenedor principal -->
+  <div class="main-container">
+    <!-- Header superior -->
+    <header class="custom-header">
+      <div class="search-box">
+        <input type="text" placeholder="¿Qué estás buscando?" />
+        <span class="icon-search">🔍</span>
+      </div>
+
+      <div class="points-box">
+        <span class="points">8.500</span>
+        <span class="icon-heart">💚</span>
+      </div>
+
+      <div class="icons-group">
+        <span class="circle-icon">🔔</span>
+        <span class="circle-icon">🏅</span>
+        <span class="circle-icon cart-icon">🛒<span class="badge">2</span></span>
+        <span class="circle-icon">👤</span>
+      </div>
+
+      <div class="user-info">
+        <div>¡Hola Usuario!</div>
+        <small>Platino</small>
+      </div>
+    </header>
+
+    <!-- Sección del simulador -->
+       <div class="banner-simulador">
+        <div class="banner-left">
+          <img src="logo-valientes.png" alt="Logo Valientes Promesa" />
+          <div class="text">
+            <h2>Simulador <span>de puntos</span></h2>
+            <p>Simula los puntos que podrás ganar si cumples con tus objetivos trimestrales.</p>
+          </div>
+        </div>
+        <div class="banner-right">
+          <!-- Imagen decorativa si aplica -->
+          <img src="medalla.png" alt="Medalla" />
+        </div>
+      </div>
+
+      <!-- Segmento Selector -->
+      <div class="segmento-select">
+        <label for="segmento">Selecciona tu segmento:</label>
+        <select id="segmento">
+          <option value="EXPERTO">EXPERTO</option>
+          <option value="ASCENSO">ASCENSO</option>
+          <option value="PROMESA">PROMESA</option>
+        </select>
+      </div>
+
+      <div id="simulador" class="simulador-cards">
+        <!-- Aquí se insertarán las cards dinámicamente -->
+      </div>
+      
+
+      <!-- Total de puntos -->
+      <div class="total-box" id="totalPuntos">
+        Total puntos que puedes ganar en el trimestre: 0
+      </div>
+   </div>
+
+  <!-- 👉 jQuery primero -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+         ></script>
+
+  <!-- 👉 Luego tu script -->
+  <script src="script.js"></script>
+</body>
+</html>

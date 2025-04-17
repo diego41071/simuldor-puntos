@@ -1,0 +1,461 @@
+/* General */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+}
+
+/* Contenedor principal al lado del sidebar */
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+/* Encabezados */
+h1, h2 {
+  color: #0067b1;
+}
+
+.segmento-select {
+  margin: 1.5rem 0;
+}
+
+/* Tarjetas */
+.card {
+  flex: 1 1 220px;
+  max-width: 260px; /* Limita el ancho máximo */
+  min-width: 200px; /* Opcional, puedes reducirlo si quieres más compacto */
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+
+.padding-foco{
+  padding: 0;
+}
+
+#simulador.cuatro-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+#simulador.cuatro-cards .card {
+  max-width: 240px;
+  min-width: 200px;
+  width: 100%;
+}
+
+
+/* Fila de inputs */
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.row label {
+  flex: 1 1 100px;
+}
+
+.row input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Total de puntos */
+.total-box {
+  background: #e7f3ff;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Botón */
+button {
+  background-color: #0067b1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Encabezado */
+.custom-header {
+  display: flex;
+  align-items: center;
+  background-color: #002b0f;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Buscador */
+.search-box {
+  position: relative;
+  flex: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.icon-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+/* Puntos */
+.points-box {
+  display: flex;
+  align-items: center;
+  background-color: #f47ac3;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+}
+
+.points-box .points {
+  margin-right: 0.5rem;
+}
+
+/* Iconos */
+.icons-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.circle-icon {
+  background-color: #fbeef5;
+  color: #f47ac3;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.cart-icon .badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #f47ac3;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Usuario */
+.user-info {
+  margin-left: 1rem;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.user-info small {
+  display: block;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #fef9f9;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #eee;
+  min-height: 100vh;
+}
+
+.logo img {
+  max-width: 140px;
+  margin-bottom: 2rem;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.menu-item:hover {
+  background-color: #ffe6f0;
+}
+
+.menu-item .icon {
+  width: 32px;
+  height: 32px;
+  background-color: #f47ac3;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.menu-item.logout .icon {
+  background-color: #ff6b6b;
+}
+
+/* Banner del simulador */
+.banner-simulador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002b0f;
+  color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-left img {
+  width: 60px;
+  height: auto;
+}
+
+.banner-left h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.banner-left span {
+  color: #f47ac3;
+}
+
+.banner-left p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.banner-right img {
+  max-height: 80px;
+}
+
+/* Contenedor de la sección del simulador */
+.simulador-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.cuota-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  border-top: 6px solid #e0a800;
+}
+
+.cuota-valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #007e33;
+  margin: 0.5rem 0;
+}
+
+.cuota-cumplimiento {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.cuota-total {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #888;
+}
+.visibilidad-card {
+  background-color: #f5f5f5;
+  border-top: 6px solid #e0a800;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.visibilidad-card .icono img {
+  width: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.visibilidad-card .checks label {
+  margin: 0 0.5rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.subtotal {
+  margin-top: 0.8rem;
+  color: #f0ad4e;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.subtotal span {
+  color: #004d00;
+  font-size: 1.1rem;
+}
+.foco-card {
+  border-top: 10px solid #5cb85c;
+   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.foco-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  background-color: #5cb85c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.foco-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background-color: #fff;
+}
+
+.foco-table th {
+  background-color: #e9ecef;
+  font-weight: 600;
+  border: 1px solid #ccc;  
+  padding: 4px 6px;
+  font-size: 0.85em;
+  line-height: 1.2;
+}
+
+.foco-table td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 4px 6px;
+  font-size: 0.85em;
+  line-height: 1.2;
+}
+
+.foco-table td:first-child {
+  text-align: left;
+  width: 60%;
+  font-size: 0.78em;
+  padding: 4px;
+  text-align: left;
+}
+
+.foco-card .subtotal {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #5cb85c;
+  text-align: center;
+}
+
+.foco-card .subtotal span {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.simulador-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.simulador-cards .card {
+  width: 230px;
+}
+
+.cuota-card,
+.visibilidad-card {
+  width: 280px;
+  min-width: 260px;
+  max-width: 300px;
+}
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 16px); /* 2 por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* 1 por fila en pantallas pequeñas */
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 45% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100% !important;
+  }
+}
