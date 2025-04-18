@@ -46,20 +46,21 @@ function cargarMetas() {
     } else if (sec.key === 'visibilidad' || sec.key === 'extra') {
       const icono = sec.key === 'visibilidad' ? 'icono-lupa.png' : 'icono-extra-lupa.png';
       html += `
-        <div class="card visibilidad-card">
-          <h2 class="section-title">${sec.label}</h2>
-          <div class="icono">
-            <img src="ruta/a/tu/${icono}" alt="${sec.label}" />
-          </div>
-          <div class="checks">
-            <label><input type="checkbox" id="${sec.key}_m1" /> Mes 1</label>
-            <label><input type="checkbox" id="${sec.key}_m2" /> Mes 2</label>
-            <label><input type="checkbox" id="${sec.key}_m3" /> Mes 3</label>
-          </div>
-          <div class="subtotal">
-            Subtotal: <span id="${sec.key}Subtotal">0</span> Puntos
-          </div>
-        </div>
+       <div class="card visibilidad-card">
+  <h2 class="section-title">${sec.label}</h2>
+  <div class="icono">
+    <img src="ruta/a/tu/${icono}" alt="${sec.label}" />
+  </div>
+  <div class="checks">
+    <label><input type="checkbox" id="${sec.key}_m1" /><span>Mes 1</span></label>
+    <label><input type="checkbox" id="${sec.key}_m2" /><span>Mes 2</span></label>
+    <label><input type="checkbox" id="${sec.key}_m3" /><span>Mes 3</span></label>
+  </div>
+  <div class="subtotal">
+    Subtotal: <span id="${sec.key}Subtotal">0</span> Puntos
+  </div>
+</div>
+
       `;
     } else if (sec.key === 'foco') {
       html += `
@@ -119,13 +120,13 @@ function cargarMetas() {
   });
 
   $('#simulador').html(html);
-// Ajustar layout dinámicamente según cantidad de tarjetas
-const cantidadCards = $('#simulador .card').length;
-$('#simulador').removeClass('cuatro-cards');
+  // Ajustar layout dinámicamente según cantidad de tarjetas
+  const cantidadCards = $('#simulador .card').length;
+  $('#simulador').removeClass('cuatro-cards');
 
-if (cantidadCards === 4) {
-  $('#simulador').addClass('cuatro-cards');
-}
+  if (cantidadCards === 4) {
+    $('#simulador').addClass('cuatro-cards');
+  }
 
   // Asignar eventos onchange después de renderizar
   $('input').on('change', calcularTotal);

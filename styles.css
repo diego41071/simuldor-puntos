@@ -16,7 +16,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
 }
 
 /* Encabezados */
@@ -336,49 +336,147 @@ button {
 }
 
 .cuota-card {
-  background-color: #f5f5f5;
-  border-radius: 10px;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
-  border-top: 6px solid #e0a800;
+  width: 250px;
+  /* ajusta según diseño general */
+  margin: auto;
+}
+
+.cuota-card .section-title {
+  background-color: #e0a800;
+  /* amarillo oscuro */
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin: -1rem -1rem 1rem -1rem;
+  font-weight: bold;
+}
+
+.cuota-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .cuota-valor {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #007e33;
-  margin: 0.5rem 0;
+  color: #004d25;
+  border: 2px solid #dcdcdc;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .cuota-cumplimiento {
-  color: #555;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: #999999;
+  font-weight: 500;
 }
 
 .cuota-total {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.95rem;
+  color: #888888;
+  font-weight: bold;
 }
 
+
 .visibilidad-card {
-  background-color: #f5f5f5;
-  border-top: 6px solid #e0a800;
-  border-radius: 10px;
-  padding: 1rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
+  overflow: hidden;
+  padding: 0%;
+}
+
+.visibilidad-card .section-title {
+  background-color: #f0ad4e;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.7rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.visibilidad-card .icono {
+  margin: 0.5rem auto 0.2rem;
 }
 
 .visibilidad-card .icono img {
-  width: 40px;
-  margin-bottom: 0.5rem;
+  width: 30px;
+  height: 30px;
+}
+
+.visibilidad-card .checks {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.8rem 0;
 }
 
 .visibilidad-card .checks label {
-  margin: 0 0.5rem;
-  display: inline-block;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #444;
+  cursor: pointer;
 }
+
+.visibilidad-card .checks input[type="checkbox"] {
+  display: none;
+}
+
+.visibilidad-card .checks input[type="checkbox"]+span::before {
+  content: "✓";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 2px solid #f0ad4e;
+  border-radius: 6px;
+  color: transparent;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.visibilidad-card .checks input[type="checkbox"]:checked+span::before {
+  background-color: #fff3cd;
+  color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.visibilidad-card .subtotal {
+  background-color: #f9f9f9;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  color: #f0ad4e;
+  font-weight: 500;
+  text-align: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.visibilidad-card .subtotal span {
+  color: #000;
+  font-weight: bold;
+}
+
+
 
 .subtotal {
   margin-top: 0.8rem;
@@ -393,65 +491,79 @@ button {
 }
 
 .foco-card {
-  border-top: 10px solid #5cb85c;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
 }
 
 .foco-card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
   background-color: #5cb85c;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px 8px 0 0;
+  font-size: 1rem;
+  padding: 0.6rem;
+  margin: 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .foco-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
-  background-color: #fff;
+  font-size: 0.8rem;
 }
 
 .foco-table th {
-  background-color: #e9ecef;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 6px;
   font-weight: 600;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  font-size: 0.85em;
-  line-height: 1.2;
+  border: 1px solid #dcdcdc;
 }
 
 .foco-table td {
-  border: 1px solid #ccc;
+  padding: 6px;
+  border: 1px solid #e0e0e0;
   text-align: center;
-  padding: 4px 6px;
-  font-size: 0.85em;
-  line-height: 1.2;
+  vertical-align: middle;
 }
 
 .foco-table td:first-child {
   text-align: left;
-  width: 60%;
-  font-size: 0.78em;
-  padding: 4px;
-  text-align: left;
+  padding-left: 8px;
+  font-size: 0.78rem;
+  color: #555;
 }
 
 .foco-card .subtotal {
-  margin-top: 0.8rem;
-  font-size: 1rem;
-  font-weight: bold;
+  background-color: #f9f9f9;
+  padding: 0.7rem;
+  font-size: 0.95rem;
   color: #5cb85c;
+  font-weight: 500;
   text-align: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .foco-card .subtotal span {
-  font-size: 1.1rem;
   color: #000;
+  font-weight: bold;
+}
+
+.foco-card .section-title {
+  background-color: #5cb85c;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem;
+  margin: 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .simulador-cards {
@@ -531,8 +643,6 @@ button {
 .flex-container {
   display: flex;
 }
-
-
 
 
 @media (max-width: 768px) {
