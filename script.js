@@ -52,9 +52,9 @@ function cargarMetas() {
     <img src="ruta/a/tu/${icono}" alt="${sec.label}" />
   </div>
   <div class="checks">
-    <label><input type="checkbox" id="${sec.key}_m1" /><span>Mes 1</span></label>
-    <label><input type="checkbox" id="${sec.key}_m2" /><span>Mes 2</span></label>
-    <label><input type="checkbox" id="${sec.key}_m3" /><span>Mes 3</span></label>
+   <div> <label><input type="checkbox" id="${sec.key}_m1" /><span></span></label><p>Mes 1</p></div>
+   <div>   <label><input type="checkbox" id="${sec.key}_m2" /><span></span></label><p>Mes 2</p></div>
+   <div>   <label><input type="checkbox" id="${sec.key}_m3" /><span></span></label><p>Mes 3</p></div>
   </div>
   <div class="subtotal">
     Subtotal: <span id="${sec.key}Subtotal">0</span> Puntos
