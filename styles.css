@@ -474,6 +474,52 @@ button {
 }
 
 
+.cuota-card-verde .section-title {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.cuota-card-verde .cuota-info {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+.cuota-card-verde .cuota-valor {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #006400;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.cuota-card-verde .cuota-cumplimiento {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.cuota-card-verde .cuota-total {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-top: 0.5rem;
+}
+
+.cuota-card-verde .subtotal {
+  background-color: #f9f9f9;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  color: #5cb85c;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cuota-card-verde .subtotal span {
+  color: #000;
+  font-weight: bold;
+}
 
 .subtotal {
   margin-top: 0.8rem;

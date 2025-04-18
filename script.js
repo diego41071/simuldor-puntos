@@ -33,17 +33,32 @@ function cargarMetas() {
   let html = '';
   $.each(secciones, function (i, sec) {
     if (sec.key === 'venta') {
+      const isPromesa = segmento === 'PROMESA';
       html += `
-        <div class="card cuota-card" id="cuotaCard">
-          <h2 class="section-title">${sec.label}</h2>
-          <div class="cuota-result">
-            <div class="cuota-valor" id="cuotaValor">$0</div>
-            <div class="cuota-cumplimiento" id="cuotaCumplimiento">0% Cumplimiento</div>
-            <div class="cuota-total">Total cuota trimestral $${datos.venta.toLocaleString('es-CO')}</div>
-          </div>
-        </div>
-      `;
-    } else if (sec.key === 'visibilidad' || sec.key === 'extra') {
+    <div class="card cuota-card ${isPromesa ? '' : 'cuota-card-verde'}" id="cuotaCard">
+  <h2 class="section-title">${sec.label}</h2>
+  <div class="cuota-result">
+    ${isPromesa ? `
+       <div class="cuota-valor" id="cuotaValor">$0</div>
+       <div class="cuota-cumplimiento" id="cuotaCumplimiento">0% Cumplimiento</div>
+       <div class="cuota-total">Total cuota trimestral $${datos.venta.toLocaleString('es-CO')}</div>
+    ` : `
+      <div class="cuota-info">Compra del trimestre</div>
+      <div class="cuota-valor" id="cuotaValor">$0</div>
+      <div class="cuota-cumplimiento" id="cuotaCumplimiento">0% Cumplimiento</div>
+      <div class="cuota-total">Total cuota trimestral $${datos.venta.toLocaleString('es-CO')}</div>
+    `}
+  </div>
+  ${!isPromesa ? `
+    <div class="subtotal">
+      Subtotal: <span id="ventaSubtotal">0</span> Puntos
+    </div>
+  ` : ''}
+</div>
+
+  `;
+    }
+    else if (sec.key === 'visibilidad' || sec.key === 'extra') {
       const icono = sec.key === 'visibilidad' ? 'icono-lupa.png' : 'icono-extra-lupa.png';
       html += `
        <div class="card visibilidad-card">
