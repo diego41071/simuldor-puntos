@@ -59,12 +59,12 @@ function cargarMetas() {
   `;
     }
     else if (sec.key === 'visibilidad' || sec.key === 'extra') {
-      const icono = sec.key === 'visibilidad' ? 'icono-lupa.png' : 'icono-extra-lupa.png';
+      const icono = sec.key === 'visibilidad' ? 'lupa-promesa.webp' : 'extra-promesa.webp';
       html += `
        <div class="card visibilidad-card">
   <h2 class="section-title">${sec.label}</h2>
   <div class="icono">
-    <img src="ruta/a/tu/${icono}" alt="${sec.label}" />
+    <img src="./images/${icono}" alt="${sec.label}" />
   </div>
   <div class="checks">
    <div> <label><input type="checkbox" id="${sec.key}_m1" /><span></span></label><p>Mes 1</p></div>
