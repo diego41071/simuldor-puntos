@@ -63,10 +63,11 @@ function cargarMetas() {
       html += `
        <div class="card visibilidad-card">
   <h2 class="section-title">${sec.label}</h2>
-  <div class="icono">
+
+  <div class="checks">
+    <div class="icono">
     <img src="./images/${icono}" alt="${sec.label}" />
   </div>
-  <div class="checks">
    <div> <label><input type="checkbox" id="${sec.key}_m1" /><span></span></label><p>Mes 1</p></div>
    <div>   <label><input type="checkbox" id="${sec.key}_m2" /><span></span></label><p>Mes 2</p></div>
    <div>   <label><input type="checkbox" id="${sec.key}_m3" /><span></span></label><p>Mes 3</p></div>
