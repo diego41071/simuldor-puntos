@@ -266,20 +266,34 @@ button {
   background-color: #ff6b6b;
 }
 
-/* Banner del simulador estilo moderno */
 .banner-simulador {
   display: flex;
+  flex-direction: column;
+  /* <--- cambia esto */
   justify-content: space-between;
-  align-items: center;
   background-color: #f6ede6;
   color: #333;
   border-radius: 16px;
-  padding: 0 0 2rem 2rem;
   margin-top: 2rem;
-  border-bottom: 10px solid #f4b21b;
   position: relative;
   overflow: hidden;
 }
+
+.banner-bottom-bar {
+  height: 19px;
+  background-color: #ecb918;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
 
 /* División entre logo y texto */
 .banner-left {
@@ -287,17 +301,27 @@ button {
   align-items: center;
   gap: 1.5rem;
   padding-right: 2rem;
+  margin-left: 57px;
 }
 
 /* Logo Valientes */
 .banner-left img {
-  width: 80px;
+  margin-right: 14px;
+  width: 171px;
   height: auto;
+}
+
+.logo-rounded-banner {
+  width: 159px;
+  max-height: 200px !important;
+  margin-right: 49px;
+  margin-top: 10px;
+  margin-bottom: 19px;
 }
 
 /* Títulos */
 .banner-left h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
   font-weight: bold;
   color: #f4b21b;
@@ -311,26 +335,15 @@ button {
 
 .banner-left p {
   margin: 0.3rem 0 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #666;
 }
 
 /* Imagen de la medalla */
-.banner-right img {
+.banner-right .img-design {
   max-height: 100px;
-}
-
-/* Elemento decorativo en la esquina (si es necesario) */
-.banner-simulador::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  background: url('/path/a/esquina-decorativa.svg') no-repeat center;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  opacity: 0.5;
+  position: relative;
+  bottom: 59px;
 }
 
 
