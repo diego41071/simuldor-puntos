@@ -79,6 +79,11 @@ h2 {
   border-radius: 6px;
 }
 
+.text {
+  border-left: 2px solid #d6c2a6;
+  padding-left: 50px;
+}
+
 /* Total de puntos */
 .total-box {
   background: #e7f3ff;
@@ -115,25 +120,30 @@ button {
 
 /* Buscador */
 .search-box {
-  position: relative;
-  flex: 1;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 0.5rem 2.5rem 0.5rem 1rem;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 8px 15px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .icon-search {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #333;
+  font-size: 16px;
+  margin-right: 10px;
+  color: #003300;
+  /* o el tono oscuro que uses */
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #003300;
+  /* igual al texto de ejemplo */
+  background-color: transparent;
 }
 
 /* Puntos */
@@ -208,7 +218,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 2px solid #eee;
   min-height: 100vh;
 }
 
@@ -241,8 +250,8 @@ button {
 }
 
 .menu-item .icon {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 36px;
   background-color: #f47ac3;
   color: white;
   border-radius: 50%;
@@ -265,7 +274,7 @@ button {
   background-color: #f6ede6;
   color: #333;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 0 0 2rem 2rem;
   margin-top: 2rem;
   border-bottom: 10px solid #f4b21b;
   position: relative;
@@ -277,7 +286,6 @@ button {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  border-right: 2px solid #d6c2a6;
   padding-right: 2rem;
 }
 
@@ -400,7 +408,7 @@ button {
 }
 
 .visibilidad-card .section-title {
-  background-color: #f0ad4e;
+  background-color: #e0a800;
   color: white;
   font-size: 1rem;
   font-weight: bold;
