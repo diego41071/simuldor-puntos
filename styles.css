@@ -34,9 +34,13 @@ h2 {
   color: white;
 }
 
-.section-title.segmento-ascenso,
-.section-title.segmento-experto {
+.section-title.segmento-ascenso {
   background-color: #5cb85c !important;
+  color: white;
+}
+
+.section-title.segmento-experto {
+  background-color: #00B0F0 !important;
   color: white;
 }
 
@@ -45,9 +49,13 @@ h2 {
   color: white;
 }
 
-.subtotal.segmento-ascenso,
-.subtotal.segmento-experto {
+.subtotal.segmento-ascenso {
   color: #5cb85c !important;
+}
+
+
+.subtotal.segmento-experto {
+  color: #00B0F0 !important;
 }
 
 /* Tarjetas */
@@ -116,6 +124,22 @@ h2 {
   width: 78%;
   margin: 2.5em auto;
 }
+
+.total-box.segmento-promesa {
+  background: #876400;
+  /* Amarillo */
+}
+
+.total-box.segmento-ascenso {
+  background: #3A5624;
+  /* Verde */
+}
+
+.total-box.segmento-experto {
+  background: #00607A;
+  /* Azul */
+}
+
 
 /* Botón */
 button {
@@ -316,6 +340,20 @@ button {
   border-bottom-right-radius: 20px;
 }
 
+/* Colores por segmento */
+.segmento-promesa .banner-bottom-bar {
+  background-color: #f0ad4e;
+}
+
+.segmento-ascenso .banner-bottom-bar {
+  background-color: #5cb85c;
+}
+
+.segmento-experto .banner-bottom-bar {
+  background-color: #00B0F0;
+}
+
+
 .banner-content {
   display: flex;
   justify-content: space-between;
@@ -356,6 +394,20 @@ button {
   font-weight: bold;
   color: #f4b21b;
 }
+
+/* Colores por segmento */
+.titulo-promesa {
+  color: #f4b21b !important;
+}
+
+.titulo-ascenso {
+  color: #5cb85c !important;
+}
+
+.titulo-experto {
+  color: #00B0F0 !important;
+}
+
 
 .banner-left h2 span {
   color: #333;
@@ -419,7 +471,6 @@ button {
 .cuota-valor {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #004d25;
   border: 2px solid #dcdcdc;
   padding: 0.4rem 1rem;
   border-radius: 10px;
@@ -565,14 +616,13 @@ button {
 }
 
 .check-mark.segmento-experto::before {
-  border-color: #0067b1;
-  color: #0067b1;
-
+  border-color: #00B0F0;
+  color: #00B0F0;
 }
 
 .check-item input[type="checkbox"]:checked+.check-mark.segmento-experto::before {
-  color: #0067b1;
-  border-color: #0067b1;
+  color: #00B0F0;
+  border-color: #00B0F0;
 
 }
 
@@ -612,7 +662,6 @@ button {
 .cuota-card-verde .cuota-valor {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #006400;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 0.3rem 1rem;

@@ -24,6 +24,24 @@ function cargarMetas() {
   const datos = metas[segmento];
 
   const segmentoClase = `segmento-${segmento.toLowerCase()}`;
+  // Aplicar clase al contenedor padre para el banner-bottom-bar
+  $('.main-container')
+    .removeClass('segmento-promesa segmento-ascenso segmento-experto')
+    .addClass(`segmento-${segmento.toLowerCase()}`);
+
+  // Actualizar imagen del logo según segmento
+  const logoPath = `./images/logo-${segmento.toLowerCase()}.webp`;
+  $('#logoSegmento').attr('src', logoPath);
+
+  $('#tituloSimulador')
+    .removeClass('titulo-promesa titulo-ascenso titulo-experto')
+    .addClass(`titulo-${segmento.toLowerCase()}`);
+
+  $('#imgMedalla').attr('src', `./images/medalla-${segmento.toLowerCase()}.webp`);
+
+  $('#totalPuntos')
+    .removeClass('segmento-promesa segmento-ascenso segmento-experto')
+    .addClass(`segmento-${segmento.toLowerCase()}`);
 
 
   const secciones = [
