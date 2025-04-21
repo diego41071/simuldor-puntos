@@ -40,6 +40,15 @@ h2 {
   color: white;
 }
 
+.subtotal.segmento-promesa {
+  background-color: #e0a800;
+  color: white;
+}
+
+.subtotal.segmento-ascenso,
+.subtotal.segmento-experto {
+  color: #5cb85c !important;
+}
 
 /* Tarjetas */
 .card {

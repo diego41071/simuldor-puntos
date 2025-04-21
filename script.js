@@ -53,7 +53,7 @@ function cargarMetas() {
     `}
   </div>
   ${!isPromesa ? `
-    <div class="subtotal">
+          <div class="subtotal ${segmentoClase}">
       Subtotal: <span id="ventaSubtotal">0</span> Puntos
     </div>
   ` : ''}
@@ -75,7 +75,7 @@ function cargarMetas() {
    <div>   <label><input type="checkbox" id="${sec.key}_m2" /><span></span></label><p>Mes 2</p></div>
    <div>   <label><input type="checkbox" id="${sec.key}_m3" /><span></span></label><p>Mes 3</p></div>
   </div>
-  <div class="subtotal">
+          <div class="subtotal ${segmentoClase}">
     Subtotal: <span id="${sec.key}Subtotal">0</span> Puntos
   </div>
 </div>
@@ -115,7 +115,7 @@ function cargarMetas() {
               </tr>
             </tbody>
           </table>
-          <div class="subtotal">
+          <div class="subtotal ${segmentoClase}">
             Subtotal: <span id="focoSubtotal">0</span> Puntos
           </div>
         </div>
