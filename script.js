@@ -23,6 +23,9 @@ function cargarMetas() {
   const segmento = $('#segmento').val();
   const datos = metas[segmento];
 
+  const segmentoClase = `segmento-${segmento.toLowerCase()}`;
+
+
   const secciones = [
     { key: 'venta', label: 'Cuota Trimestral' },
     ...(segmento !== 'PROMESA' ? [{ key: 'foco', label: 'Marca Foco' }] : []),
@@ -36,7 +39,7 @@ function cargarMetas() {
       const isPromesa = segmento === 'PROMESA';
       html += `
     <div class="card cuota-card ${isPromesa ? '' : 'cuota-card-verde'}" id="cuotaCard">
-  <h2 class="section-title">${sec.label}</h2>
+  <h2 class="section-title ${segmentoClase}">${sec.label}</h2>
   <div class="cuota-result">
     ${isPromesa ? `
        <div class="cuota-valor" id="cuotaValor">$0</div>
@@ -62,7 +65,7 @@ function cargarMetas() {
       const icono = sec.key === 'visibilidad' ? 'lupa-promesa.webp' : 'extra-promesa.webp';
       html += `
        <div class="card visibilidad-card">
-  <h2 class="section-title">${sec.label}</h2>
+  <h2 class="section-title ${segmentoClase}">${sec.label}</h2>
 
   <div class="checks">
     <div class="icono">
@@ -81,7 +84,7 @@ function cargarMetas() {
     } else if (sec.key === 'foco') {
       html += `
         <div class="card foco-card padding-foco">
-          <h2 class="section-title">${sec.label}</h2>
+          <h2 class="section-title ${segmentoClase}">${sec.label}</h2>
           <table class="foco-table">
             <thead>
               <tr>
@@ -120,7 +123,7 @@ function cargarMetas() {
     } else {
       html += `
         <div class="card">
-          <h2 class="section-title">${sec.label}</h2>
+          <h2 class="section-title ${segmentoClase}">${sec.label}</h2>
           <div class="row">
             <label for="${sec.key}_m1">Mes 1:</label>
             <input type="number" id="${sec.key}_m1" />
@@ -148,6 +151,9 @@ function cargarMetas() {
   $('input').on('change', calcularTotal);
 
   calcularTotal();
+
+
+
 }
 
 function calcularTotal() {
