@@ -86,13 +86,14 @@ h2 {
 
 /* Total de puntos */
 .total-box {
-  background: #e7f3ff;
+  background: #876400;
   padding: 1rem;
-  border-radius: 10px;
   font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 1.5rem;
+  color: white;
+  width: 78%;
+  margin: 2.5em auto;
 }
 
 /* Botón */
