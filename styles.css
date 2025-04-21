@@ -484,13 +484,15 @@ button {
   display: none;
 }
 
+/* Estilo base del checkbox visual */
 .visibilidad-card .checks input[type="checkbox"]+span::before {
   content: "✓";
   display: inline-block;
   width: 24px;
   height: 24px;
   background-color: white;
-  border: 2px solid #f0ad4e;
+  border: 2px solid;
+  /* Border dinámico más abajo */
   border-radius: 6px;
   color: transparent;
   font-weight: bold;
@@ -500,11 +502,83 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-.visibilidad-card .checks input[type="checkbox"]:checked+span::before {
-  background-color: #fff3cd;
+.checks {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.8rem 0;
+  gap: 10px;
+}
+
+.check-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.check-item input[type="checkbox"] {
+  display: none;
+}
+
+.check-item .check-mark::before {
+  content: "✓";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 6px;
+  color: transparent;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 4px;
+  border: 2px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+.check-item input[type="checkbox"]:checked+.check-mark::before {
+  background-color: white;
+}
+
+/* Segmento colores */
+.check-mark.segmento-promesa::before {
+  border-color: #f0ad4e;
+  color: #f0ad4e;
+}
+
+.check-item input[type="checkbox"]:checked+.check-mark.segmento-promesa::before {
   color: #f0ad4e;
   border-color: #f0ad4e;
 }
+
+.check-mark.segmento-ascenso::before {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
+
+.check-item input[type="checkbox"]:checked+.check-mark.segmento-ascenso::before {
+  color: #5cb85c;
+  border-color: #5cb85c;
+
+}
+
+.check-mark.segmento-experto::before {
+  border-color: #0067b1;
+  color: #0067b1;
+
+}
+
+.check-item input[type="checkbox"]:checked+.check-mark.segmento-experto::before {
+  color: #0067b1;
+  border-color: #0067b1;
+
+}
+
+
+
+
 
 .visibilidad-card .subtotal {
   background-color: #f9f9f9;

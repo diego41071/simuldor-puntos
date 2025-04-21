@@ -62,19 +62,41 @@ function cargarMetas() {
   `;
     }
     else if (sec.key === 'visibilidad' || sec.key === 'extra') {
-      const icono = sec.key === 'visibilidad' ? 'lupa-promesa.webp' : 'extra-promesa.webp';
+      const icono = sec.key === `visibilidad` ? `lupa-${segmento.toLowerCase()}.svg` : `extra-${segmento.toLowerCase()}.svg`;
       html += `
        <div class="card visibilidad-card">
   <h2 class="section-title ${segmentoClase}">${sec.label}</h2>
 
-  <div class="checks">
-    <div class="icono">
-    <img src="./images/${icono}" alt="${sec.label}" />
+<div class="checks">
+  <div class="icono">
+    <img src="./icons/${icono}" alt="${sec.label}" />
   </div>
-   <div> <label><input type="checkbox" id="${sec.key}_m1" /><span></span></label><p>Mes 1</p></div>
-   <div>   <label><input type="checkbox" id="${sec.key}_m2" /><span></span></label><p>Mes 2</p></div>
-   <div>   <label><input type="checkbox" id="${sec.key}_m3" /><span></span></label><p>Mes 3</p></div>
+
+  <div class="check-item">
+    <label for="${sec.key}_m1">
+      <input type="checkbox" id="${sec.key}_m1" />
+      <span class="check-mark segmento-${segmento.toLowerCase()}"></span>
+      <p>Mes 1</p>
+    </label>
   </div>
+
+  <div class="check-item">
+    <label for="${sec.key}_m2">
+      <input type="checkbox" id="${sec.key}_m2" />
+      <span class="check-mark segmento-${segmento.toLowerCase()}"></span>
+      <p>Mes 2</p>
+    </label>
+  </div>
+
+  <div class="check-item">
+    <label for="${sec.key}_m3">
+      <input type="checkbox" id="${sec.key}_m3" />
+      <span class="check-mark segmento-${segmento.toLowerCase()}"></span>
+      <p>Mes 3</p>
+    </label>
+  </div>
+</div>
+
           <div class="subtotal ${segmentoClase}">
     Subtotal: <span id="${sec.key}Subtotal">0</span> Puntos
   </div>
